@@ -14,18 +14,35 @@
     </div>
     <div class="container">
       <h2>Summary</h2>
-      <p>URL shortener. Redirects to the original URL automatically if found.</p>
+      <p>Takes in an image search query and returns the results in JSON.</p>
 
-      <h2>Usage</h2>
-      <code>http://timestamp.nodejs.iadw.in/new/[http://example.com/this-is-a-long-url-that-needs-to-be-shorten]</code>
+      <h2>APIs</h2>
 
-      <h2>Examples</h2>
-      <h3>Input</h3>
-      <code>http://timestamp.nodejs.iadw.in/new/https://google.com</code><br>
-      <code>http://timestamp.nodejs.iadw.in/new/http://iadw.in</code>
+      <code>/search/[query]</code><br>
+      Search query. Required.
 
-      <h3>Output</h3>
-      <code>http://lilurl.nodejs.iadw.in/5956</code> redirects to google.com
+      <h4>Example</h4>
+      <code>http://imgsearch.nodejs.iadw.in/search/dank%20memes</code>
+
+      <hr>
+
+      <code>/search/[query]?offset=[num]</code><br>
+      Shows page <code>[num]</code> of search result.
+
+      <h4>Example</h4>
+      <code>http://imgsearch.nodejs.iadw.in/search/dank%20memes?offset=2</code>
+      
+      <hr>
+
+      <h2>Sample Output</h2>
+      <code>
+        {<br>
+          &nbsp;&nbsp;url: "http://i2.kym-cdn.com/photos/images/facebook/000/875/509/533.jpg",<br>
+          &nbsp;&nbsp;snippet: "Dank Memes | Know Your Meme",<br>
+          &nbsp;&nbsp;thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWgok3w_ebpzXZzr5rWGCFQUsomgyep1hG8sShx7vvHj0uW0SCwdvYyk",<br>
+          &nbsp;&nbsp;context: "http://knowyourmeme.com/memes/dank-memes"<br>
+        }
+      </code>
 
     </div>
   </body>
