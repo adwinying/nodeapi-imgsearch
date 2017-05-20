@@ -21,13 +21,28 @@ Shows page `[num]` of search result.
 #### Example
 ```http://imgsearch.nodejs.iadw.in/search/dank%20memes?offset=2```
 
+---
 
-## Sample Output
+### Sample Output
 ```javascript
 {
   url: "http://i2.kym-cdn.com/photos/images/facebook/000/875/509/533.jpg",
   snippet: "Dank Memes | Know Your Meme",
   thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWgok3w_ebpzXZzr5rWGCFQUsomgyep1hG8sShx7vvHj0uW0SCwdvYyk",
   context: "http://knowyourmeme.com/memes/dank-memes"
+}
+```
+
+## Logs
+
+```/logs```
+
+Shows recent search queries.
+
+### Sample Output
+```javascript
+{
+	query: "nice meme",
+	timestamp: "2017-05-20T10:01:16.319Z"
 }
 ```
