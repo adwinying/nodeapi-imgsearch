@@ -42,7 +42,7 @@ Shows recent search queries.
 ### Sample Output
 ```javascript
 {
-	query: "nice meme",
-	timestamp: "2017-05-20T10:01:16.319Z"
+  query: "nice meme",
+  timestamp: "2017-05-20T10:01:16.319Z"
 }
 ```
